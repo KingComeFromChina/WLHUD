@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WLProgressHUD" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pCu-MC-U38"/>
+                        <viewControllerLayoutGuide type="bottom" id="iuw-Gj-Nyu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OEr-pA-OBi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="Ere-EZ-B6g">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="WOJ-8P-HQ3">
+                                <rect key="frame" x="128" y="182" width="120" height="303"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VqS-7x-efT">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="39"/>
+                                        <color key="backgroundColor" red="0.95445698499999998" green="0.25712496039999999" blue="0.1786567271" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="dIP-6G-nba"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="17"/>
+                                        <state key="normal" title="Success">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="successBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Ym-BZ-Ye4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0z-TO-dKJ">
+                                        <rect key="frame" x="0.0" y="44" width="120" height="39"/>
+                                        <color key="backgroundColor" red="0.95445698499999998" green="0.25712496039999999" blue="0.1786567271" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="17"/>
+                                        <state key="normal" title="Error">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="errorBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="50l-jW-2KF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcv-A0-gma">
+                                        <rect key="frame" x="0.0" y="88" width="120" height="39"/>
+                                        <color key="backgroundColor" red="0.95445698499999998" green="0.25712496039999999" blue="0.1786567271" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="17"/>
+                                        <state key="normal" title="Info">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="infoBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pBw-9w-UUv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnD-tR-zJv">
+                                        <rect key="frame" x="0.0" y="132" width="120" height="39"/>
+                                        <color key="backgroundColor" red="0.95445698499999998" green="0.25712496039999999" blue="0.1786567271" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="17"/>
+                                        <state key="normal" title="Loading">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="loadingBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UHd-6w-bGV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Nr-8g-QEx">
+                                        <rect key="frame" x="0.0" y="176" width="120" height="39"/>
+                                        <color key="backgroundColor" red="0.95445698499999998" green="0.25712496039999999" blue="0.1786567271" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="17"/>
+                                        <state key="normal" title="Text1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="text1BtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XxS-EH-xYf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qis-Hn-YYu">
+                                        <rect key="frame" x="0.0" y="220" width="120" height="39"/>
+                                        <color key="backgroundColor" red="0.95445698499999998" green="0.25712496039999999" blue="0.1786567271" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="17"/>
+                                        <state key="normal" title="Text 2">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="text2BtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vIa-oT-sKD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gs2-Z8-Gfo">
+                                        <rect key="frame" x="0.0" y="264" width="120" height="39"/>
+                                        <color key="backgroundColor" red="0.95445698499999998" green="0.25712496039999999" blue="0.1786567271" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="Hide">
+                                            <color key="titleColor" red="0.08564772457" green="0.49405008550000001" blue="0.69020420309999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="selected" title="Show">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="hideBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2nh-gt-hLS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ere-EZ-B6g" secondAttribute="trailing" id="7uU-GV-15z"/>
+                            <constraint firstItem="Ere-EZ-B6g" firstAttribute="top" secondItem="OEr-pA-OBi" secondAttribute="top" id="PV9-7M-rDn"/>
+                            <constraint firstItem="WOJ-8P-HQ3" firstAttribute="centerX" secondItem="OEr-pA-OBi" secondAttribute="centerX" id="Vjr-RF-hq7"/>
+                            <constraint firstItem="Ere-EZ-B6g" firstAttribute="leading" secondItem="OEr-pA-OBi" secondAttribute="leading" id="WcM-OP-Wq4"/>
+                            <constraint firstItem="WOJ-8P-HQ3" firstAttribute="centerY" secondItem="OEr-pA-OBi" secondAttribute="centerY" id="fbH-Gi-SkB"/>
+                            <constraint firstItem="iuw-Gj-Nyu" firstAttribute="top" secondItem="Ere-EZ-B6g" secondAttribute="bottom" id="nEd-yB-dqA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outletCollection property="buttonCollect" destination="VqS-7x-efT" collectionClass="NSMutableArray" id="IOq-Lc-cMq"/>
+                        <outletCollection property="buttonCollect" destination="f0z-TO-dKJ" collectionClass="NSMutableArray" id="Izh-ay-e9X"/>
+                        <outletCollection property="buttonCollect" destination="lcv-A0-gma" collectionClass="NSMutableArray" id="V92-NS-c42"/>
+                        <outletCollection property="buttonCollect" destination="tnD-tR-zJv" collectionClass="NSMutableArray" id="fBm-eP-IhG"/>
+                        <outletCollection property="buttonCollect" destination="3Nr-8g-QEx" collectionClass="NSMutableArray" id="peo-9o-N4c"/>
+                        <outletCollection property="buttonCollect" destination="Qis-Hn-YYu" collectionClass="NSMutableArray" id="ZqJ-S8-LiR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="36.431784107946029"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg" width="1600" height="2133"/>
+    </resources>
+</document>
